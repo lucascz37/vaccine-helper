@@ -30,7 +30,7 @@ public class UserController {
     @PostMapping
     public ResponseEntity<Response> createUser(@Valid @RequestBody UserCreateRequest body){
         try{
-            userService.saveUser(new User(body.getName(), body.getEmail(), body.getCpf(), body.getBirth()));
+            userService.save(new User(body.getName(), body.getEmail(), body.getCpf(), body.getBirth()));
             String message = "User " + body.getName() + " Created";
             return new ResponseEntity<>(new Response(message), HttpStatus.CREATED);
         }catch (Exception e){

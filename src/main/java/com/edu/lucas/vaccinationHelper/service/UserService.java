@@ -7,10 +7,11 @@ package com.edu.lucas.vaccinationHelper.service;
 import com.edu.lucas.vaccinationHelper.model.User;
 import com.edu.lucas.vaccinationHelper.repository.UserRepository;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-@Repository
+@Service
 public class UserService {
 
     private final UserRepository userRepository;
@@ -19,7 +20,7 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public User saveUser(User user){
+    public User save(User user){
         return userRepository.save(user);
     }
 
