@@ -6,7 +6,6 @@ package com.edu.lucas.vaccinationHelper.service;
 
 import com.edu.lucas.vaccinationHelper.model.User;
 import com.edu.lucas.vaccinationHelper.repository.UserRepository;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
